@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not Found</title>
+  <link rel="shortcut icon" href="images/ico/notfound.png" type="image/png">
+  <link rel="stylesheet" href="fonts.css">
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0F111A;
+    color: white;
+    font-weight: 100;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .notfound-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+
+  .NotFound {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url("images/skins/hmmm.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 210px;
+    font-family: "Radio Canada", sans-serif;
+    margin: 0;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+
+  h1:nth-child(1) { transform: rotate(35deg); }
+  h1:nth-child(3) { transform: rotate(-35deg); }
+
+</style>
+
+<div class="notfound-container">
+  <h1>4</h1>
+  <div class="NotFound"></div>
+  <h1>4</h1>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: Edu QLD Beginner;
+    src: url("fonts/EduQLDBeginner/EduQLDBeginner-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Edu QLD Beginner;
+  src: url("fonts/EduQLDBeginner/EduQLDBeginner-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Edu QLD Beginner;
+  src: url("fonts/EduQLDBeginner/EduQLDBeginner-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Radio Canada;
+  src: url("fonts/RadioCanada/RadioCanada-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Radio Canada;
+  src: url("fonts/RadioCanada/RadioCanada-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lucida Console";
+  src: local("lucon.ttf"),
+  url("fonts/LucidaConsole/lucon.ttf") format("truetype");
+}
+@font-face {
+  font-family: Noto Sans;
+  src: url("fonts/NotoSans/NotoSans-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: Noto Sans;
+  src: url("fonts/NotoSans/NotoSans-ThinItalic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: Noto Sans;
+  src: url("fonts/NotoSans/NotoSans-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: Noto Sans;
+  src: url("fonts/NotoSans/NotoSans-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("fonts/Metropolis/Metropolis-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("fonts/Metropolis/Metropolis-RegularItalic.otf") format("opentype");
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("fonts/Metropolis/Metropolis-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("fonts/Metropolis/Metropolis-ExtraLightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("fonts/Metropolis/Metropolis-Thin.otf") format("opentype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("fonts/Metropolis/Metropolis-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}

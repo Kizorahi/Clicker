@@ -1,0 +1,460 @@
+@import "fonts.css";
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.click { animation: load 1.5s ease; }
+
+@keyframes load {
+  from { width: 10px; height: 10px; }
+  to { width: 200px; height: 200px; }
+}
+
+body {
+  text-align: center;
+  background-color: #0F111A;
+  color: white;
+  font-family: Metropolis;
+  font-weight: 100;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #090B10;
+  border-bottom: solid 2px #62B5BB;
+  height: 40px;
+  display: grid;
+  align-items: center;
+}
+
+.carts {
+  position: absolute;
+  width: 40px;
+  left: 0;
+}
+
+.battle {
+  position: absolute;
+  width: 40px;
+  left: 23px;
+  top: 0;
+}
+
+.theme {
+  position: absolute;
+  right: 40px;
+  margin-top: 7px;
+}
+
+.themeWindow {
+  display: none;
+  background-color: #0f111a;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 334px;
+  height: 600px;
+  border: solid 2px #62B5BB;
+  border-top: none;
+  z-index: 1;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.selectTheme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+
+.theme img { height: 38px; rotate: 180deg; }
+
+.themeForm {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(240, 248, 255, 0.247);
+  border-radius: 4px;
+}
+
+#darkTheme { background: linear-gradient(to bottom right, #090B10 50%, #0F111A 50%); }
+#lightTheme { background: linear-gradient(to bottom right, #adadad 50%, #dfdfdf 50%); }
+#defaultTheme { background: linear-gradient(to top left, #00eaa8 50%, #00a7f2 50%); }
+#oldTheme { background: linear-gradient(to bottom right, #ffff00 50%, limegreen 50%); }
+#violetToPink { background: linear-gradient(to bottom right, violet 50%, pink 50%); }
+#redToPurple { background: linear-gradient(to bottom right, rgb(238, 39, 39) 50%, rebeccapurple 50%); }
+#GDkaV5 { background: linear-gradient(to bottom right, #94bbe9 50%, #eeaeca 50%); }
+#GDkaV6 { background: linear-gradient(to bottom right, #ff8000 50%, #df7a95 50%); }
+
+.deleteSave {
+  position: absolute;
+  right: 0;
+  margin-top: 4px;
+}
+.deleteSave img { height: 34px; }
+
+.carts {height: 38px; z-index: 3;}
+
+.balance {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 50%;
+}
+#balance { color: ghostwhite; font-size: 28px; }
+
+.shop {
+  position: relative;
+  display: none;
+  margin-top: 40px;
+  padding: 20px;
+  height: 90vh;
+  background-color: #0F111A;
+  z-index: 3;
+}
+
+.battleWindow {
+  font-family: "Lucida Console";
+  display: none;
+  margin-top: 40px;
+  width: 100%;
+  height: 90vh;
+  background-color: #0F111A;
+  z-index: 3;
+}
+
+.octopus img { 
+  width: 300px;
+  height: 300px;
+}
+
+.weapons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 30px;
+}
+
+.weaponImage {
+  position: absolute;
+  left: 0; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100px;
+  z-index: -1;
+}
+
+.shopContentToggle { display: block; }
+.openBattleWindow { display: block; }
+
+.click {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background: linear-gradient(to bottom, #00eaa8, #00a7f2);
+}
+
+.uploadReset {
+  background: url();
+}
+
+#up {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  color: gray;
+  filter: opacity(40%)
+} .up {
+  display: flex;
+  justify-content: center;
+  font-family: "Edu QLD Beginner", cursive;
+}
+
+.market {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px; column-gap: 10px;
+}
+
+.blockBuy, .weaponBlockBuy {
+  position: relative;
+  height: 120px; 
+  width: 140px;
+  display: inline-block;
+  border: groove 3px #62B5BB;
+  transition: 0.3s;
+  line-height: 2.4;
+}
+
+.priceFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.priceFlex img {
+  width: 22px;
+  margin-bottom: 3px; 
+}
+
+.shopBlock {
+  display: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.shopBlock.shopActiveBlock { display: flex; }
+
+@media only screen and (max-width: 768px) {
+  .shopBlock {
+    justify-content: center;
+  }
+}
+
+.skinForm {
+  display: inline-block;
+  width: 110px; height: 110px;
+  border-radius: 100px;
+  background-color: rgba(240, 248, 255, 0.247);
+}
+
+.skins { gap: 70px; }
+.skinForm div {margin-top: 126px;}
+
+.backgroundHeaderCatalog {
+  height: 40px; width: 300px;
+  background-color: rgba(255, 255, 255, 0.219);
+  border-radius: 10px;
+}
+
+.backgroundHeader { gap: 50px; }
+.backgroundHeaderCatalog div { margin-top: 55px; }
+
+.cursorForm {
+  position: relative;
+  display: inline-block;
+  width: 80px; height: 80px;
+}
+
+.cursors { gap: 60px; }
+.cursorForm .priceFlex { margin-top: 116px; position: absolute; }
+
+.cursorRemove svg path { fill: #fff; }
+
+.select {
+  display: flex;
+  column-gap: 14%;
+  row-gap: 11px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.select p {
+  border-bottom: solid 3px #62b5bb4b;
+  border-radius: 8%;
+  width: 115%;
+  font-family: Metropolis;
+  font-weight: normal;
+}
+
+.clickEffect {
+  position: absolute;
+  width: 25px; height: 25px;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+.clickEffectCircle {
+  border-radius: 50%;
+  animation: cursorCircleAnimated 0.5s linear;
+}
+
+.clickEffectStar {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: cursorStarAnimated 0.5s linear;
+}
+
+.cursorCard, #cursorColor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #62B5BB;
+  width: 70px; height: 70px;
+}
+
+.cursorCardCircle { border-radius: 50%; }
+.cursorForm:hover .cursorCardCircle {
+  animation: cursorCircleAnimated 0.7s linear infinite;
+  background: red;
+  transition: 0.3s;
+}
+
+.cursorCardStar { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.cursorForm:hover .cursorCardStar {
+  animation: cursorStarAnimated 0.7s linear infinite;
+  background: red;
+  transition: 0.3s;
+}
+
+@keyframes cursorCircleAnimated {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorStarAnimated {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Skins */
+.colorSkin { position: relative; background-color: #62B5BB; }
+
+.input {
+  width: 110px; height: 110px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;top: 0;
+  margin: auto;
+  filter: opacity(0%);
+}
+
+.gradient {
+    display: none;
+    position: relative;
+    background: linear-gradient(to bottom, #00eaa8, #00a7f2);
+    height: 110px;
+    width: 110px;
+}
+
+.gradient .sBGt {
+    position: absolute;
+    width: 110px;
+    height: 55px;
+    margin: 0;
+    left: 0;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .gradient .sBGt:hover {
+    border: 4px solid #00000090;
+  }
+
+  .sBGt1 {
+    top: 0;
+    border-radius: 100px 100px 0 0;
+  }
+
+   .sBGt2 {
+    bottom: 0px;
+    border-radius: 0 0 100px 100px;
+  }
+
+#inputGradient1, #inputGradient2 {
+  position: absolute;
+  width: 110px;
+  height: 55px;
+  left: 0;
+  filter: opacity(0%);
+}
+
+#inputGradient1 { top: 0; }
+#inputGradient2 { bottom: 0; }
+
+.random { animation: random 8s infinite; }
+
+@keyframes random {
+  0% { background: #3e0080; }
+  10% { background: #287233 ; }
+  20% { background: #FF2301; }
+  30% { background: #344093; }
+  40% { background: #F8F32B; }
+  50% { background: #E63244; }
+  60% { background: #6D3F5B; }
+  70% { background: #D36E70; }
+  80% { background: rgb(255, 20, 147); }
+  90% { background: #E1CC4F; }
+  100% { background: aquamarine; }
+}
+
+.rgb { background: url(images/skins/rgb.png) no-repeat center / cover; }
+
+.pokeball { background: url(images/skins/pokeball.png) no-repeat center / cover; }
+
+.pikapika { background: url(images/skins/pikapika.png) no-repeat center / cover; }
+
+.bill { background: url(images/skins/bill.png) no-repeat center / cover;  }
+
+.stolenFromHomer { background: url(images/skins/donut.png) no-repeat center / cover; }
+
+.animateSkin { animation: animateSkin 8s infinite; }
+
+@keyframes animateSkin {
+  0% { background-color: aqua;}
+  10% { background-color: lime;}
+  20% { background-color: red;}
+  30% { background-color: hotpink;}
+  40% { background-color: yellow;}
+  50% { background-color: royalblue;}
+  60% { background-color: rebeccapurple;}
+  70% { background-color: greenyellow;}
+  80% { background-color: aquamarine;}
+  90% { background-color: khaki;}
+  100% { background-color: lightseagreen; }
+}
+
+.target { background: url(images/skins/target.png) no-repeat center / cover; }
+
+.vinyl_record { background: url(images/skins/vinyl_record.png) no-repeat center / cover; }
+/*------------*/
+
+/* Header BG */
+.sunset { background: url("images/header/sunset.jpg") no-repeat center / cover; }
+
+.starrySky { background: url("images/header/starrySky.webp") no-repeat center / cover; }
+
+.ocean { background: url("images/header/ocean.jpg") no-repeat center / cover; }
+
+.stars { background: url("images/header/stars.jpg") no-repeat center / cover; }
+
+.c01 { background: url("images/header/01c.webp") no-repeat center / cover; }
+
+.rainbow {
+  background: linear-gradient(to right, #ff5733, #ffbd33, #eaff33, #33ff9d, #338fff, #a833ff, #ff33c8);
+  background-size: 200% 100%;
+  animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow { to { background-position: -200% center; } }
+
+.planetEarth { background: url(images/header/planetEarth.jpg) no-repeat center / cover; }
+
+.paintBackground { background: url(images/header/paintBackground.jpg) no-repeat center / cover; }
+
+.lightTrail { background: url(images/header/lightTrail.jpg) no-repeat center / cover; }
+
+.minionsBackground { background: url(images/header/minionsBackground.jpg) no-repeat center / cover; }
+
